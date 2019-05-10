@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="orange">
+      <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+	<div>
+		<div class="post-image-container">
+			<img src="{{ post.thumbnailUrl }}">
+		</div>
+		<div padding>
+			<h3>{{ post.title }}</h3>
+			<p>{{ post.url }}</p>
+		</div>
+	</div>
+</ion-content>
+<ion-footer no-border>
+	<ion-row>
+		<ion-col>
+	    	<button ion-button color="primary" full>
+	    		<ion-icon name="ios-call-outline"></ion-icon>
+	    	</button>
+		</ion-col>
+		<ion-col>
+	    	<button ion-button color="secondary" full>
+	    		<ion-icon name="ios-mail-outline"></ion-icon>
+	    	</button>
+		</ion-col>
+	</ion-row>
+</ion-footer>
